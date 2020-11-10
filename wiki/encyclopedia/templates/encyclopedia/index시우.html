@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+
+  <html lang="en">
+    <head>
+      
+      <title>H!STORY-{% block title %}{% endblock %}</title>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+      
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="{% static 'encyclopedia/css/main.css' %}" rel="stylesheet">
+      <link href="{% static 'encyclopedia/css/sidenav.css' %}" rel="stylesheet">
+      <link href="{% static 'encyclopedia/css/navbar.css' %}" rel="stylesheet">
+      <script src="{% static 'encyclopedia/js/sidenav.js' %}"></script>
+   </head>
+
+    <body>
+      
+      <div id="mysidenav" class="mysidenav">
+        <a href="#" class="closebtn" onclick='closeNav()'>X</a>
+        <a href="/login.html">(로그인해주세요)</a>
+        <a href="{% url 'newEntry' %}">새 문서 생성</a>        <a href="#">Clients</a>
+        <a href="{% url 'random' %}" role="button">랜덤 문서 보기</a>
+      </div>
+
+      <nav>
+        <span class="logo" ><a href="{% url 'index' %}">H!STORY</a></span>
+        <div id="navRight">
+            <span class="material-icons">
+                search
+            </span>
+            <form action="{% url 'search' %}" method="GET">
+              <input type="text" name="q" placeholder="Search Encyclopedia">
+          </form>
+            <span class="material-icons" onclick="openNav()">
+                person
+            </span>
+        </div>
+    </nav>
+
+      <div id="main">
+        <section>
+          <article>
+              <hr>
+              {% if search %}
+                    <h2> {{ value }} 를 찾는중입니다</h2>
+              {% else %}
+              <span style="font-size: 3em;">H!STORY에 오신 것을 환영합니다!</span>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sapiente impedit dolores reprehenderit dolore corrupti, a vero, sed repellat aliquid perspiciatis. Nulla iste a sit, debitis repellendus quidem numquam tenetur.
+                Ratione blanditiis soluta inventore dolore animi mollitia quod laudantium doloribus? Exercitationem, eaque. Explicabo quidem similique, ratione nesciunt numquam exercitationem inventore. Asperiores nulla error odit porro a. Nam deserunt animi ullam.
+                Quae, voluptas itaque eum rerum autem ratione, inventore similique molestias nulla nisi soluta enim saepe quam, quibusdam maiores! Culpa veniam nostrum ut expedita non inventore explicabo numquam amet doloremque ratione!
+                Soluta saepe delectus voluptatum, voluptates recusandae molestias dolor maiores ut iure eius nesciunt perferendis accusamus obcaecati minus. Doloremque odio labore porro vitae dolorem natus est fugiat. Officiis corporis quasi sunt.
+                Maxime amet, architecto sint natus, fugit assumenda magni nostrum incidunt dicta porro quibusdam similique suscipit quam aliquid? Sed dicta, deserunt expedita animi cupiditate eum perspiciatis. Reiciendis quae omnis nemo ducimus?
+                Unde deserunt excepturi quae ex? Quo sint minus aspernatur quaerat laboriosam facilis, saepe ullam dolores iure, molestias dolorem nemo. Dolorem iure repudiandae consequuntur laudantium, eligendi saepe. Laudantium doloremque in earum.
+                Doloremque mollitia fuga deleniti error praesentium hic tempore fugiat accusamus facere delectus eveniet rerum nesciunt id repellendus pariatur ipsum, quisquam quo accusantium numquam voluptatem. Sequi asperiores culpa facere placeat et.
+                Neque ipsum magni nam repellendus esse ut a ad, ducimus, exercitationem, eaque officiis architecto? Voluptatum possimus maiores odio est, consequuntur, in dolorum veritatis non ut repudiandae asperiores? Commodi, perspiciatis tempora.
+                Reprehenderit tenetur ipsam, deleniti blanditiis eum doloremque dolorum placeat possimus ex cumque reiciendis a totam dolores incidunt voluptatum assumenda quam ut animi! Deleniti vero distinctio veniam molestias error temporibus ratione?
+                Nostrum quis voluptate nesciunt odio facilis illo consectetur expedita alias eveniet quod explicabo a delectus, impedit amet harum at provident fugiat quisquam! Maiores harum iusto laborum cum ab? Ipsam, laudantium.
+                Suscipit similique quos repellat aut incidunt nesciunt, mollitia praesentium. Facere illum adipisci beatae error, voluptatum eos aliquam quo recusandae voluptates, assumenda, aut eum! Autem illum doloribus esse deleniti, aliquam perferendis.
+                Esse, nobis qui? 바이든 대통령의 당선을 축하드립니다 modi dolorem neque tenetur repellat voluptates, rerum at inventore harum culpa error iusto fugiat quas totam minus laboriosam maiores velit animi distinctio ullam obcaecati magni temporibus.
+                Nemo laboriosam non libero aliquam quae. Animi necessitatibus aliquid vero dolorum non id, sit maiores, asperiores voluptatem recusandae libero beatae saepe ea sed at dolores ab rerum, ex atque neque!
+           \umquam.
+                Provident, ullam? Dignissimos natus esse corrupti tempora iusto officiis, aliquid fugiat? Necessitatibus explicabo soluta iure quibusdam distinctio cum reprehenderit nulla, modi consequuntur est eaque esse obcaecati excepturi architecto facilis. Asperiores?
+                Odio molestiae eaque ipsum dicta ab. Exercitationem pariatur ad minima sed suscipit qui cumque nam, nesciunt, temporibus enim omnis sit quod praesentium nihil culpa atque soluta cum provident blanditiis velit?
+                Porro impedit velit repudiandae animi harum ipsam ullam, itaque perferendis fuga quas quos accusantium distinctio eum sed autem quidem tempora pariatur saepe esse tempore! Dolore nobis magnam beatae. Quaerat, odio.
+                Quod voluptates recusandae rerum, a ullam nemo soluta ratione autem beatae omnis, sapiente quia commodi praesentium minus voluptatem voluptas vero eos. Placeat, quia beatae? Voluptatum obcaecati pariatur repellat explicabo cupiditate!
+                Ius\consequatur inventore ducimus nesciunt harum ex excepturi? Dignissimos nihil, hic cupiditate, officiis maxime beatae ad perspiciatis at enim consequatur error! Tempora alias fugiat eius error!
+                Minima natus ea esse illo, odit nostrum deserunt alias quidem saepe libero? Dolorem incidunt itaque minus! Quas optio iure nihil perferendis accusantium, ipsam aspernatur vitae exercitationem, adipisci, modi culpa accusamus!
+                Quidem nisi rerum, asperiores quo iure molestiae voluptate illo facilis totam perferendis? Voluptas quisquam minima enim labore dolores doloribus quos nesciunt! Aut ea repudiandae at dolores suscipit, iste nesciunt commodi.
+                Eius ex necessitatibus nisi, deserunt tempore commodi aperiam quia repellat libero rem unde dolores soluta praesentium perferendis possimus iste? Dolores, expedita vel deleniti aliquam molestiae incidunt quos fugit earum quisquam!
+                Quis suscipit necessitatibus illum, harum a quidem nesciunt ad est vel ea cum repellat at placeat cumque, esse facilis? Assumenda nulla explicabo, quam autem aliquam velit exercitationem sunt rem id?
+                Ad, expedita quo. Ad et necessitatibus corrupti quia aliquam voluptate, cum dolorem aperiam ut error perferendis? Ex laborum accusantium magnam nesciunt quidem architecto necessitatibus, iusto, error sapiente placeat quo officia!
+                Corporis amet repudiandae quis earum, aliquam culpa alias exercitationem sapiente? Ex iure, atque, soluta tempora ea nam dignissimos at hic aperiam quam doloribus harum obcaecati nostrum blanditiis impedit voluptatum exercitationem.
+                Facilis, nostrum molestias maiores adipisci autem ipsam possimus ab eos, eveniet, laudantium suscipit temporibus dolorem dolor distinctio neque ut et illo blanditiis asperiores. Hic nobis doloremque aspernatur modi rem eum?
+                Porro rem ipsa saepe voluptate totam corrupti, praesentium autem dolorum, delectus quidem et atque, sit dolor sunt vero quam voluptatum voluptates in enim ullam eius facilis beatae dicta aut. Sit!
+                Eos accusamus minima quia, id sequi aliquid veniam, dicta culpa sed ad suscipit minus quibusdam veritatis deleniti labore assumenda in cum accusantium maxime architecto magni provident? Quod culpa distinctio dolorem.
+                Laborum molestiae quisquam, iusto animi esse accusantium saepe odit voluptatum deleniti. Quod provident dolore distinctio voluptatum! Placeat aspernatur sed harum, libero repellendus et repudiandae ipsam necessitatibus inventore culpa, rem aperiam.
+                Reiciend\\um temporibus! Hic sint, perspiciatis aperiam pariatur molestiae iste, nam laborum accusantium illo quas ipsum natus nobis obcaecati atque quia cumque cum, dicta esse. Rem, quae repudiandae!
+                Saepe, mollitia eligendi nam consequatur perferendis qui aperiam ad repellendus, vitae aliquid aut? Commodi nisi nesciunt eaque? Aliquam dolor magni, esse rerum deleniti praesentium assumenda architecto hic corrupti quod explicabo!
+                Enim soluta illo adipisci repudiandae blanditiis esse consequatur sit assumenda cupiditate quisquam quidem explicabo labore eos temporibus eveniet libero atque non, est aut accusantium perspiciatis aliquid! Dolor tenetur dignissimos adipisci.
+              </p>
+          </article>
+        </section>
+        <aside>
+            <div id="recent">
+              <span>최근 변경된 문서</span>
+              <ul id="recentList">
+                {% for entry in entries %}
+                <a href = "/encyclopedia/wiki/{{ entry }}" ><li>{{ entry }}</li></a>
+                {% endfor %}
+              </ul>
+            </div>
+
+  
+        </aside>
+      </div>
+
+
+      <footer>
+        <p>조 바이든 후보자의 미합중국 대통령 당선 확정을 축하드립니다</p>
+        <p>ジョーバイデン候補者の米合衆国大統領当確をおめでとうございます。</p>
+        <p>문서에서 작성된 내용은 허구일 가능성도 있습니다, 참고용으로만 사용하세요</p>
+    </footer>
+    
+    </body>
+  </html>
+        

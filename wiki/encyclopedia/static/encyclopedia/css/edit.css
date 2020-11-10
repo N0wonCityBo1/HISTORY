@@ -1,0 +1,19 @@
+article > input{
+    /* width: 600px; */
+    width: 160%;
+    text-align: center;
+    /* margin-left: 63px; */
+    font-size: 3em;
+}
+
+article > textarea{
+    /* margin-left: 63px; */
+    width: 160%;
+    
+    text-align: center;
+}
+
+article > hr{
+    /* margin-left: 50px; */
+    text-align: center;
+}
